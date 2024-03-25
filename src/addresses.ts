@@ -7,35 +7,10 @@ type ChainAddresses = {
   v1CoreMarketAddress: string;
 }
 
-const DEFAULT_NETWORKS = [ChainId.MAINNET, ChainId.GOERLI, ChainId.SEPOLIA]
-
-function constructSameAddressMap(address: string, additionalNetworks: ChainId[] = []): AddressMap {
-  return DEFAULT_NETWORKS.concat(additionalNetworks).reduce<AddressMap>((memo, chainId) => {
-    memo[chainId] = address
-    return memo
-  }, {})
-}
-
-export const PIEMARKET_ADDRESSES: AddressMap = constructSameAddressMap('0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984', [
-  ChainId.MAINNET,
-  ChainId.GOERLI,
-  ChainId.SEPOLIA,
-  ChainId.POLYGON,
-  ChainId.POLYGON_MUMBAI,
-  ChainId.CELO_ALFAJORES,
-  ChainId.CELO,
-  ChainId.BNB,
-  ChainId.BNB_TESTNET,
-  ChainId.BASE,
-  ChainId.BASE_GOERLI
-])
-
-// export const PIEMARKET_NFT_AIRDROP_CLAIM_ADDRESS = '0x8B799381ac40b838BBA4131ffB26197C432AFe78';
-
 // Networks that share most of the same addresses i.e. Mainnet, Goerli, Optimism, Arbitrum, Polygon
 const DEFAULT_ADDRESSES: ChainAddresses = {
-  v1CoreFactoryAddress: '0x1F98431c8aD98523631AE4a59f267346ea31F984',
-  v1CoreMarketAddress: '0x1F98415757620B543A52E61c46B32eB19261F984'
+  v1CoreFactoryAddress: '0xC6d06514a7e51F8A328f5416E38506215D7EFd6a',
+  v1CoreMarketAddress: '0x6fb2D3c803470742CAA74CD8Ab678Eca71F791Ce'
 }
 
 export const CHAIN_TO_ADDRESSES_MAP: Record<SupportedChainsType, ChainAddresses> = {
