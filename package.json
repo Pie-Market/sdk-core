@@ -14,5 +14,19 @@
   },
   "devDependencies": {
     "typescript": "^5.4.3"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Pie-Market/sdk-core.git"
+  },
+  "keywords": [
+    "pie-market",
+    "nft",
+    "fractionalized",
+    "token"
+  ],
+  "bugs": {
+    "url": "https://github.com/Pie-Market/sdk-core/issues"
+  },
+  "homepage": "https://github.com/Pie-Market/sdk-core#readme"
 }
