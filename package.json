@@ -1,6 +1,6 @@
 {
   "name": "@pie-market/sdk-core",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "⚒️ SDK for Pie-Market typescript appications",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -13,6 +13,8 @@
     "build": "tsc"
   },
   "devDependencies": {
+    "@types/bn.js": "^5.1.5",
+    "@types/keccak": "^3.0.4",
     "typescript": "^5.4.3"
   },
   "repository": {
@@ -28,5 +30,10 @@
   "bugs": {
     "url": "https://github.com/Pie-Market/sdk-core/issues"
   },
-  "homepage": "https://github.com/Pie-Market/sdk-core#readme"
+  "homepage": "https://github.com/Pie-Market/sdk-core#readme",
+  "dependencies": {
+    "bn.js": "^5.2.1",
+    "buffer": "^6.0.3",
+    "keccak": "^3.0.4"
+  }
 }

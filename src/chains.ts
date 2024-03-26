@@ -24,13 +24,14 @@ export const SUPPORTED_CHAINS = [
   ChainId.BNB_TESTNET,
   ChainId.BASE,
   ChainId.BASE_GOERLI
-] as const
-export type SupportedChainsType = typeof SUPPORTED_CHAINS[number]
+] as const;
+
+export type SupportedChainsType = typeof SUPPORTED_CHAINS[number];
 
 export enum NativeCurrencyName {
-  // Strings match input for CLI
   ETHER = 'ETH',
   MATIC = 'MATIC',
+  BASE = 'BASE',
   CELO = 'CELO',
   BNB = 'BNB'
 }
