@@ -24,10 +24,10 @@ export type SupportedEventsType = typeof SUPPORTED_EVENTS[number];
 const EVENT_SIGNATURES = {
   [SUPPORTED_EVENTS[EventName.PieCreated]]: 'PieCreated(address,uint256,address,uint16,string,string)',
   [SUPPORTED_EVENTS[EventName.OwnerChanged]]: 'OwnerChanged(address,address)',
-  [SUPPORTED_EVENTS[EventName.BuySlices]]: 'PieCreated(address,uint256,address,uint16,string,string)',
-  [SUPPORTED_EVENTS[EventName.SplitSlices]]: 'PieCreated(address,uint256,address,uint16,string,string)',
-  [SUPPORTED_EVENTS[EventName.MergeSlices]]: 'PieCreated(address,uint256,address,uint16,string,string)',
-  [SUPPORTED_EVENTS[EventName.Collect]]: 'PieCreated(address,uint256,address,uint16,string,string)'
+  [SUPPORTED_EVENTS[EventName.BuySlices]]: 'BuySlices(address,address,uint256)',
+  [SUPPORTED_EVENTS[EventName.SplitSlices]]: 'SplitSlices(uint256[],uint256[],address)',
+  [SUPPORTED_EVENTS[EventName.MergeSlices]]: 'MergeSlices(uint256[],uint256,address)',
+  [SUPPORTED_EVENTS[EventName.Collect]]: 'Collect(address,address)'
 }
 
 type EventContracts = {
