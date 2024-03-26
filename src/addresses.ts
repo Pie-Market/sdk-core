@@ -1,16 +1,16 @@
 import { ChainId, SUPPORTED_CHAINS, SupportedChainsType } from './chains';
 
-type AddressMap = { [chainId: number]: string };
+type AddressMap = { [chainId: number]: `0x${string}` };
 
 type ChainAddresses = {
-  v1CoreFactoryAddress: string;
-  v1CoreMarketAddress: string;
+  v1CoreFactoryAddress: `0x${string}`;
+  v1CoreMarketAddress: `0x${string}`;
 }
 
 // Networks that share most of the same addresses i.e. Mainnet, Goerli, Optimism, Arbitrum, Polygon
-const DEFAULT_ADDRESSES: ChainAddresses = {
-  v1CoreFactoryAddress: '0xC6d06514a7e51F8A328f5416E38506215D7EFd6a',
-  v1CoreMarketAddress: '0x6fb2D3c803470742CAA74CD8Ab678Eca71F791Ce'
+export const DEFAULT_ADDRESSES: ChainAddresses = {
+  v1CoreFactoryAddress: '0xAB006b7e3bE88034E86EC14cFDc27b754237Fd34',
+  v1CoreMarketAddress: '0xEEBD50f9bc0952c475023Ac2Ea0B7A1364A8A7CD'
 }
 
 export const CHAIN_TO_ADDRESSES_MAP: Record<SupportedChainsType, ChainAddresses> = {
