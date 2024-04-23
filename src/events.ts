@@ -1,5 +1,5 @@
-import { DEFAULT_ADDRESSES } from "./addresses";
-import { keccak256Hex } from "./utils/keccak256";
+import { DEFAULT_ADDRESSES } from './addresses';
+import { keccak256Hex } from './utils/keccak256';
 
 export enum EventName {
   PieCreated,
@@ -41,7 +41,7 @@ function constructEvent(event: SupportedEventsType, contract: `0x${string}`): Ev
   return {
     event,
     signature: EVENT_SIGNATURES[event],
-    topic0: keccak256Hex(EVENT_SIGNATURES[event]),
+    topic0: `0x${keccak256Hex(EVENT_SIGNATURES[event])}`,
     contract
   }
 }

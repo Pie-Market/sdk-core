@@ -7,7 +7,7 @@ import createKeccakHash from 'keccak';
 const Buffer = buffer.Buffer;
 
 function keccak256Hex(value: Buffer | BN | string | number) {
-  return keccak256(value).toString('hex') as `0x${string}`;
+  return keccak256(value).toString('hex');
 }
 
 function keccak256(value: Buffer | BN | string | number) {
