@@ -36,10 +36,7 @@ export const V1_CORE_FACTORY_ADDRESSES: AddressMap = {
 
 export const V1_CORE_MARKET_ADDRESSES: AddressMap = {
   ...SUPPORTED_CHAINS.reduce<AddressMap>((memo, chainId) => {
-    const v1CoreMarketAddress = CHAIN_TO_ADDRESSES_MAP[chainId].v1CoreMarketAddress
-    if (v1CoreMarketAddress) {
-      memo[chainId] = v1CoreMarketAddress
-    }
+    memo[chainId] = CHAIN_TO_ADDRESSES_MAP[chainId].v1CoreMarketAddress
     return memo
   }, {})
 }
