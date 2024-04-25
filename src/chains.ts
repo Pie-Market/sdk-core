@@ -34,8 +34,23 @@ export enum NativeCurrencyName {
   BNB = 'BNB'
 }
 
+export type Network = {
+  networkName: string;
+  chainName: string;
+  chainNameShort: string;
+  chainId: number;
+  chainHex: string;
+  nativeCurrency: {
+    name: string;
+    symbol: string;
+    decimals: number;
+  };
+  rpcUrls: string[];
+  blockExplorerUrls: string[];
+}
+
 // ethereum
-const ethereum = {
+const ethereum: Network = {
   networkName: "ethereum",
   chainName: "Ethereum Mainnet",
   chainNameShort: "Ethereum",
@@ -49,7 +64,7 @@ const ethereum = {
   rpcUrls: ["https://rpc.ankr.com/eth"],
   blockExplorerUrls: ["https://etherscan.io"]
 };
-const sepolia = {
+const sepolia: Network = {
   networkName: "sepolia",
   chainName: "Sepolia Testnet",
   chainNameShort: "Sepolia",
@@ -64,7 +79,7 @@ const sepolia = {
   blockExplorerUrls: ["https://sepolia.etherscan.io/"]
 };
 // polygon
-const polygon = {
+const polygon: Network = {
   networkName: "polygon",
   chainName: "Polygon Mainnet",
   chainNameShort: "Polygon",
@@ -78,7 +93,7 @@ const polygon = {
   rpcUrls: ["https://polygon-rpc.com"],
   blockExplorerUrls: ["https://polygonscan.com/"]
 };
-const amoy = {
+const amoy: Network = {
   networkName: "amoy",
   chainName: "Amoy Testnet",
   chainNameShort: "Amoy",
@@ -93,7 +108,7 @@ const amoy = {
   blockExplorerUrls: ["https://amoy.polygonscan.com/"]
 };
 // bsc
-const bsc = {
+const bsc: Network = {
   networkName: "bsc",
   chainName: "Binance Smart Chain",
   chainNameShort: "BSC",
@@ -107,7 +122,7 @@ const bsc = {
   rpcUrls: ["https://endpoints.omniatech.io/v1/bsc/mainnet/public"],
   blockExplorerUrls: ["https://bscscan.com"]
 };
-const bsctest = {
+const bsctest: Network = {
   networkName: "bsctest",
   chainName: "Binance Smart Chain Testnet",
   chainNameShort: "BSC Testnet",
@@ -122,7 +137,7 @@ const bsctest = {
   blockExplorerUrls: ["https://testnet.bscscan.com"]
 };
 // celo
-const celo = {
+const celo: Network = {
   networkName: "celo",
   chainName: "Celo Mainnet",
   chainNameShort: "Celo",
@@ -136,7 +151,7 @@ const celo = {
   rpcUrls: ["https://forno.celo.org"],
   blockExplorerUrls: ["https://celoscan.io"]
 };
-const alfajores = {
+const alfajores: Network = {
   networkName: "alfajores",
   chainName: "Alfajores Testnet",
   chainNameShort: "Alfajores",
@@ -151,7 +166,7 @@ const alfajores = {
   blockExplorerUrls: ["https://alfajores.celoscan.io"]
 };
 // base
-const base = {
+const base: Network = {
   networkName: "base",
   chainName: "Base Mainnet",
   chainNameShort: "Base",
@@ -165,7 +180,7 @@ const base = {
   rpcUrls: ["https://mainnet.base.org"],
   blockExplorerUrls: ["https://basescan.org"]
 };
-const basesepolia = {
+const basesepolia: Network = {
   networkName: "basesepolia",
   chainName: "Base Sepolia Testnet",
   chainNameShort: "Base Sepolia",
@@ -186,6 +201,8 @@ export type IValidNetwork =
   'bsc' | 'bsctest' |
   'celo' | 'alfajores' |
   'base' | 'basesepolia';
+
+export type NetworkName = IValidNetwork;
 
 export const SUPPORTED_NETWORKS = {
   // ETH
